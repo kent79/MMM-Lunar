@@ -6,7 +6,7 @@ Module.register("MMM-Lunar",{
 
 	getStyles: function() {
 		return [
-			this.file('MMM-LunarCal.css')
+			this.file('MMM-Lunar.css')
 		]
 	},
 	
@@ -38,7 +38,7 @@ Module.register("MMM-Lunar",{
 	updateLunarDate: function() {
 		var self = this
 		//    you can set this as hour   and minute in the future to test
-		let MS_in_day = 20*60*60*1000+8*60*1000  //24*60*60*1000;
+		let MS_in_day = 24*60*60*1000  //24*60*60*1000;
 		let now = moment();
 		let MS_til_midnight = MS_in_day - (now.diff(now.clone().startOf('day'), 'milliseconds'));
 			
